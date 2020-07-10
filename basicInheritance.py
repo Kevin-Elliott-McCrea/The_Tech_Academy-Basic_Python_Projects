@@ -1,15 +1,15 @@
-def car()
+class Car()
     wheels = 4
     topSpeed = "100mph"
     acceleration = "10mps"
     windows = 6
 
 
-def hondaCivic(car)
+class HondaCivic(car)
     color = "red"
     doors = 4
 
 
-def toyotaTacoma(car)
+class ToyotaTacoma(car)
     color = "blue"
     horsepower = "100horses"
