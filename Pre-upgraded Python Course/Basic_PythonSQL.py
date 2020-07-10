@@ -7,10 +7,18 @@ fileList = ('information.docx', 'Hello.txt', 'myImage.png', 'myMovie.mpg', \
 cur = conn.cursor()
 
 
+
+
+directory = C:\Users\kleib_000\Desktop\New folder
+
+
+
+
 with conn:
-    cur.execute("CREATE TABLE IF NOT EXISTS tbl_textFiles(\
+    cur.execute("CREATE TABLE IF NOT EXISTS tbl_txtFiles(\
         ID INTEGER PRIMARY KEY AUTOINCREMENT, \
         file_name TEXT \
+        date_modified TEXT \
         )")
     conn.commit()
 
@@ -18,6 +26,8 @@ with conn:
         if i.endswith('.txt'):
             cur.execute('INSERT INTO tbl_textFiles (file_name) VALUES (?)', (i,))
         conn.commit()
+
+    fileList2 = cur.execute("SELECT * FROM tbl_txtFiles;")
 
     cur.execute("SELECT * FROM tbl_textFiles")
     result = cur.fetchall()
