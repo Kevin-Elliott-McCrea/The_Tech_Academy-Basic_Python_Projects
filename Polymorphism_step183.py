@@ -10,15 +10,18 @@ class humanoid():
 
 
 class human(humanoid):
-    arms = 3
-    legs = 2
-    iq = 120
+    jump = 10
+    shoes = 2
+
+    def smashHead():
+        iq = iq - 9
 
 
 class romulan(humanoid):
-    arms = 2
-    legs = 2
-    iq = 105
+    foreheadRidges = 2
+    bigNose = 1
 
-print(romulan.iq)
+    def smashHead():
+        iq = iq - 5
+
     
