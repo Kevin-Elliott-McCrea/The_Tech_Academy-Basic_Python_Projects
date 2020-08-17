@@ -9,7 +9,6 @@ cur = conn.cursor()
 
 
 
-directory = C:\Users\kleib_000\Desktop\New folder
 
 
 
@@ -24,12 +23,12 @@ with conn:
 
     for i in fileList:
         if i.endswith('.txt'):
-            cur.execute('INSERT INTO tbl_textFiles (file_name) VALUES (?)', (i,))
+            cur.execute('INSERT INTO tbl_txtFiles (file_name) VALUES (?)', (i,))
         conn.commit()
 
     fileList2 = cur.execute("SELECT * FROM tbl_txtFiles;")
 
-    cur.execute("SELECT * FROM tbl_textFiles")
+    cur.execute("SELECT * FROM tbl_txtFiles")
     result = cur.fetchall()
     print('\nThese are the file names ending in .txt: ' + str(result))
 conn.close()
