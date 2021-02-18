@@ -5,11 +5,12 @@ class Car():
     windows = 6
 
 
-class HondaCivic(car):
+class HondaCivic(Car):
     color = "red"
     doors = 4
 
 
-class ToyotaTacoma(car):
+class ToyotaTacoma(Car):
     color = "blue"
     horsepower = "100horses"
+
